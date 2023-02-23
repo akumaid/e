@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/css/sty.css" rel="stylesheet">
+  </head>
+  <body>
+      <div id="1"></div>
+    
+<div class="div-frame">
+  <div class="frame">
+    <iframe src="/e/BL-05op/dr" allow="autoplay; encrypted-media" scrolling="no" frameborder="0" allowfullscreen id="iframe"></iframe>
+  </div>
+  <ul class="tab-server" id="serverid">
+    <li class="server">Pilih Server <ul class="sub-server">
+        <li class="btn active">
+          <a href="javascript:void" onclick="go('/e/BL-05op/dr')">Drive</a>
+        </li>
+        <li class="btn">
+          <a href="javascript:void" onclick="go('//streamsb.net/embed-gl9yly07be7d')">Streamsb</a>
+        </li>
+      <li class="btn">
+          <a href="javascript:void" onclick="go('https://www.blogger.com/video.g?token=AD6v5dz5FmUe31F2GZ-mzr1WU5Xw7MC_rIhpOBHeq3Nt_je7ftZluvIpY7SlHRXIM9uZR8XMTg30msAiD4i0kJ6JjiG5NoqiPhCtsNcxg2-4XYa8xOvtbfSngeQZtbQVwoCU2Pq7FYI')">Google-v2</a>
+        </li>
+      <li class="btn">
+          <a href="javascript:void" onclick="go('//mixdrop.co/e/7rl1v0gmh06m7v')">Mixdrop</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script>
+  function go(loc) {
+    document.getElementById('iframe').src = loc;
+  };
+  var btnContainer = document.getElementById("serverid");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
+<script src="/a.js" type="text/javascript"></script>
+  </body>
+</html>
